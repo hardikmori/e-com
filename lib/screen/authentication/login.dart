@@ -22,6 +22,7 @@ class LoginScreen extends StatelessWidget {
             SizedBox(
               height: height * 0.001,
             ),
+            //img
             Center(
                 child: SvgPicture.asset(
               'assets/images/single icon White.svg',
@@ -30,6 +31,7 @@ class LoginScreen extends StatelessWidget {
             SizedBox(
               height: height * 0.001,
             ),
+            //welcome
             const Center(
               child: Text(
                 'Welcome to E-com',
@@ -49,6 +51,7 @@ class LoginScreen extends StatelessWidget {
             SizedBox(
               height: height * 0.03,
             ),
+            //your email
             const Logintextbtn(
               title: 'Your Email',
               icons: Icons.email_outlined,
@@ -56,6 +59,7 @@ class LoginScreen extends StatelessWidget {
             SizedBox(
               height: height * 0.02,
             ),
+            //password
             const Logintextbtn(
               title: 'Password',
               icons: Icons.lock,
@@ -63,6 +67,7 @@ class LoginScreen extends StatelessWidget {
             SizedBox(
               height: height * 0.03,
             ),
+            //sign in btn
             Container(
               width: width * 1,
               height: height * 0.07,
@@ -84,6 +89,7 @@ class LoginScreen extends StatelessWidget {
             SizedBox(
               height: height * 0.01,
             ),
+            //or
             const Center(
               child: Text(
                 'OR',
@@ -94,6 +100,7 @@ class LoginScreen extends StatelessWidget {
             SizedBox(
               height: height * 0.01,
             ),
+            //google btn
             Container(
               width: width * 1,
               height: height * 0.07,
@@ -116,6 +123,7 @@ class LoginScreen extends StatelessWidget {
             SizedBox(
               height: height * 0.01,
             ),
+            //facebook btm
             Container(
               width: width * 1,
               height: height * 0.07,
@@ -131,6 +139,32 @@ class LoginScreen extends StatelessWidget {
                   const Text('Login With Facebook')
                 ],
               ),
+            ),
+            SizedBox(
+              height: height * 0.01,
+            ),
+            //forgot password?
+            const Center(
+              child: Text(
+                'Forgot Password?',
+                style:
+                    TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
+              ),
+            ),
+            SizedBox(
+              height: height * 0.01,
+            ),
+            //don't have a account....
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Don't have a account? "),
+                Text(
+                  'Register',
+                  style: TextStyle(
+                      color: Colors.blue, fontWeight: FontWeight.bold),
+                )
+              ],
             ),
           ],
         ),
