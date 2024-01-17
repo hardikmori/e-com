@@ -53,15 +53,31 @@ class RegisterScreen extends StatelessWidget {
             ),
             //your email
             const Logintextbtn(
-              title: 'Your Email',
-              icons: Icons.email_outlined,
+              title: 'Full Name',
+              icons: Icons.person,
             ),
             SizedBox(
               height: height * 0.02,
             ),
             //password
             const Logintextbtn(
+              title: 'Your Email',
+              icons: Icons.email_outlined,
+            ),
+            SizedBox(
+              height: height * 0.03,
+            ),
+            //Password
+            const Logintextbtn(
               title: 'Password',
+              icons: Icons.lock,
+            ),
+            SizedBox(
+              height: height * 0.03,
+            ),
+            //Password Again
+            const Logintextbtn(
+              title: 'Password Again',
               icons: Icons.lock,
             ),
             SizedBox(

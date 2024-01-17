@@ -1,5 +1,4 @@
-import 'package:e_com_app/screen/authentication/register.dart';
-//import 'package:e_com_app/screen/authentication/splash.dart';
+import 'package:e_com_app/screen/after_authentication/navbar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlueAccent),
         useMaterial3: true,
       ),
-      home: const RegisterScreen(),
+      home: const NavBar(),
     );
   }
 }
