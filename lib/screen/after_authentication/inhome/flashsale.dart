@@ -1,3 +1,4 @@
+import 'package:e_com_app/screen/after_authentication/home.dart';
 import 'package:e_com_app/utils/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,13 @@ class _FlashSaleState extends State<FlashSale> {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.arrow_back_ios_new_outlined),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => const Home()));
+          },
+          icon: const Icon(Icons.arrow_back_ios_new_outlined),
+        ),
         title: Text(
           'Super Flash Sale',
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: width * 0.05),
@@ -140,7 +147,7 @@ class _FlashSaleState extends State<FlashSale> {
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10),
                 itemBuilder: (context, index) => Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Image.asset(
                       recomendedproduct[index]['images'],
@@ -153,6 +160,7 @@ class _FlashSaleState extends State<FlashSale> {
                       height: height * 0.01,
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
                           Icons.star,
@@ -187,6 +195,7 @@ class _FlashSaleState extends State<FlashSale> {
                       height: height * 0.01,
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('\$534,33   ',
                             style: TextStyle(
@@ -201,8 +210,10 @@ class _FlashSaleState extends State<FlashSale> {
                   ],
                 ),
               ),
+           
             ],
           ),
+      
         ),
       ),
     ));

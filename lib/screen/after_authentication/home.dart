@@ -1,3 +1,4 @@
+import 'package:e_com_app/screen/after_authentication/inhome/favariteproduct.dart';
 import 'package:e_com_app/screen/after_authentication/inhome/flashsale.dart';
 import 'package:e_com_app/utils/colors.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,7 @@ class _HomeState extends State<Home> {
     },
     {
       'img': 'assets/images/fsquilted.png',
-      'text': 'FS-Nike QUILTED\nMaxI CROS...',
+      'text': 'FS-ike QUILTED\nMaxI CROS...',
       'texts': "\$299,43"
     },
     {
@@ -42,7 +43,7 @@ class _HomeState extends State<Home> {
     },
     {
       'img': 'assets/images/fsquilted.png',
-      'text': 'FS-Nike QUILTED\nMaxI CROS...',
+      'text': 'S-Nike QUILTED\nMaxI CROS...',
       'texts': "\$299,43"
     },
   ];
@@ -70,16 +71,22 @@ class _HomeState extends State<Home> {
               Row(
                 children: [
                   SizedBox(
-                    width: width * 0.8,
+                    width: width * 0.7,
                     child: SearchBar(
                       onTap: () {},
                       onChanged: (_) {},
                       leading: const Icon(Icons.search),
                     ),
                   ),
-                  const Icon(Icons.favorite),
+                  IconButton(
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const FavariteProduct()));
+                    },
+                    icon: const Icon(Icons.favorite),
+                  ),
                   SizedBox(
-                    width: width * 0.02,
+                    width: width * 0.01,
                   ),
                   const Icon(Icons.notifications),
                 ],
@@ -285,6 +292,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
+             
               SizedBox(
                 height: height * 0.02,
               ),
@@ -392,7 +400,7 @@ class _HomeState extends State<Home> {
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10),
                 itemBuilder: (context, index) => Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Image.asset(
                       recomendedproduct[index]['images'],
@@ -405,6 +413,7 @@ class _HomeState extends State<Home> {
                       height: height * 0.01,
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
                           Icons.star,
@@ -439,6 +448,7 @@ class _HomeState extends State<Home> {
                       height: height * 0.01,
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('\$534,33   ',
                             style: TextStyle(
